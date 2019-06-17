@@ -1,0 +1,139 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.topnav {
+  background-color: #333;
+  position: absolute;
+  top: 0;
+  right: 0;
+  
+}
+
+
+.img-div{
+  margin-top: 200px;
+  margin-bottom: 200px;
+  height: 100%;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+
+.topnav-right {
+  float: right;
+}
+
+.wrapper-div {
+  height: 100%;
+  
+}
+.work-div {
+  height: 100%;
+  background-color:white; 
+  
+}
+
+header
+{
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    
+}
+
+/*.logo{
+  float: left;
+  color: #CCC;
+  position: fixed;
+  top: 4px;
+  left: 5px;
+  z-index: 999;
+  background-color: #ccc;
+  z-index: 1000;
+  width: 50px;
+  height: 40px;
+  border-radius: 60px;
+  background-image: url('https://www.w3schools.com/images/w3schools_logo.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center; 
+
+}*/
+
+.logo {
+  height: 45px;
+  width: 45px;
+  border-radius: 40px;
+}
+
+html, body {
+  height: 100%;
+  }
+
+.image{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10%;
+
+}
+
+.center_text{
+  text-align: center;
+}
+
+input[type=text], select {
+  width: 50%;
+  padding: 12px 20px;
+  margin-top: 10%; 
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size:20px;
+}
+
+
+
+
+li {
+  float: left;
+  width: 23%;
+  margin: 3%;
+  padding: 16px; 
+  text-align: center;
+  background-color: #f1f1f1;
+}
+
+/*.card {
+  padding: 16px; 
+  text-align: center;
+  background-color: #f1f1f1;
+}
+*/
+
+.close{
+      right: -34px;
+    position: relative;
+}

@@ -1,0 +1,21 @@
+<html>
+<body>
+
+<p>Click the button to create a Text Field.</p>
+
+<input name="textbox1" id="textbox1" type="text" />
+<input name="buttonExecute" onclick="execute(document.getElementById('textbox1').value)" type="button" value="Execute" />
+
+
+<script>
+function execute(val) {
+
+var div = document.createElement("li");
+div.style.color = "black";
+div.innerHTML = val;
+  document.body.appendChild(div);
+}
+</script>
+
+</body>
+</html>
