@@ -1,42 +1,31 @@
-
-
-//for close button
-var close = document.getElementsByClassName("close");
-var i;
-for (i = 0; i < close.length; i++) {
-  close[i].onclick = function() {
-    var div = this.parentElement;
-    div.style.display = "none";
-  }
-}
-
-
-//for adding new element(text div)
-
-function newElement() {
-	var liDiv = document.createElement("li");
-	var inputValue = document.getElementById("inputbox").value;
-	lStorage(inputValue);
-	var t = document.createTextNode(inputValue);
-	liDiv.appendChild(t);
-	document.getElementById("row").appendChild(liDiv);
-	document.getElementById("inputbox").value = "";
-
-	var span = document.createElement("BUTTON");
-	var txt = document.createTextNode("X");
-	span.className = "close";
-	span.appendChild(txt);
-	liDiv.appendChild(span);
-
-	for (i = 0; i < close.length; i++) {
-    close[i].onclick = function() {
-      var div = this.parentElement;
-      div.style.display = "none";
-    }
-  }
-}
-
-
-function lStorage(workText) {
-	localStorage.setItem('work_Text', workText);
+window.onload=function(){ 
+	(function(){
+  
+		var list = document.querySelector('#list');
+		var		form = document.querySelector('form');
+		var item = document.querySelector('#item');
+		
+	  form.addEventListener('submit',function(e){
+			e.preventDefault();
+			list.innerHTML += '<li>' + item.value + '</li>';
+			store();
+			item.value = "";
+		},false)
+		
+		list.addEventListener('click',function(e){
+			var t = e.target;
+				t.parentNode.removeChild(t);
+			store();
+		},false)
+		
+		function store() {
+			window.localStorage.myitems = list.innerHTML;
+		}
+		
+		function getValues() {
+			var storedValues = window.localStorage.myitems;
+			list.innerHTML = storedValues;
+		}
+		getValues();
+	})();
 }
